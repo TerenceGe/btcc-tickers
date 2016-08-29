@@ -41,7 +41,40 @@ var plugins = [
     title: '',
     appMountId: 'root',
     mobile: true
-  })
+  }),
+  function () {
+    this.plugin("done", function (stats) {
+      if(isLocal()) {
+        return
+      }
+      var replaceInFile = function (filePath, toReplace, replacement) {
+        var replacer = function (match) {
+          console.log('Replacing in %s: %s => %s', filePath, match, replacement)
+          return replacement
+        }
+        var str = fs.readFileSync(filePath, 'utf8')
+        var out = str.replace(new RegExp(toReplace, 'g'), replacer)
+        fs.writeFileSync(filePath, out)
+      }
+      var hash = stats.hash
+      replaceInFile(path.join(__dirname, './static', 'index.html'),
+        '/vendor.bundle.',
+        '/btcc-tickers/vendor.bundle.'
+      )
+      replaceInFile(path.join(__dirname, './static', 'index.html'),
+        '/bundle.',
+        '/btcc-tickers/bundle.'
+      )
+      replaceInFile(path.join(__dirname, './static', 'index.html'),
+        '<base href="/" />',
+        '<base href="/btcc-tickers" />'
+      )
+      replaceInFile(path.join(__dirname, './static', 'bundle.' + hash + '.css'),
+        '/fonts/',
+        '/btcc-tickers/fonts/'
+      )
+    })
+  }
 ]
 
 if(isLocal()) {
