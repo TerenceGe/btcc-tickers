@@ -24,7 +24,7 @@
     color: #96e7ff;
     text-align: right;
     &:before, &:after {
-      margin: 0 2px;
+      margin: 0 1px;
     }
     &.increse:before {
       content: '+';
@@ -37,9 +37,6 @@
       border-bottom: 4px solid #96e7ff;
       margin-top: 4px;
       margin-right: 0;
-    }
-    &.decline:before {
-      content: '-';
     }
     &.decline:after {
       content: '';

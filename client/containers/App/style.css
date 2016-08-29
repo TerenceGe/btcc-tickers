@@ -5,7 +5,6 @@ html, body {
   background: linear-gradient(#2455be 0,#2ebedd 100%);
   font-family: $fontFamily;
   color: white;
-  height: 100%;
 
   @media screen and (width <= 667px) {
     font-size: 18px;
