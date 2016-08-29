@@ -73,6 +73,10 @@ var plugins = [
         '/fonts/',
         '/btcc-tickers/fonts/'
       )
+      replaceInFile(path.join(__dirname, './static', 'bundle.' + hash + '.js'),
+        'fonts/',
+        'btcc-tickers/fonts/'
+      )
     })
   }
 ]
