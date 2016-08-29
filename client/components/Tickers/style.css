@@ -1,0 +1,24 @@
+.tickers {
+  display: flex;
+  .priceTickers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 0;
+    div:last-of-type {
+      margin-left: -1px;
+    }
+  }
+  .volumeTickers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.625rem 0;
+  }
+}
+
+@media screen and (width <= 667px) {
+  .tickers {
+    flex-direction: column;
+  }
+}
