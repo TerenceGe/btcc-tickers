@@ -2,7 +2,6 @@
   display: inline-block;
   margin-top: 0.625rem;
   font-size: 0.75rem;
-
   .zhSelect {
     border: 1px solid white;
     border-top-left-radius: 4px;
@@ -12,7 +11,6 @@
     display: inline-block;
     color: white;
   }
-
   .enSelect {
     border: 1px solid white;
     border-top-right-radius: 4px;
@@ -21,7 +19,6 @@
     display: inline-block;
     color: white;
   }
-
   .active {
     background-color: rgba(0,0,0,0.2);
     color: white;

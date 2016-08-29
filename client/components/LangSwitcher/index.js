@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import style from './style.css'
 
 class LangSwitcher extends Component {
-
   switchLang() {
     let nextLang = this.props.lang === 'en' ? 'zh' : 'en'
     this.props.actions.changeLang(nextLang)
   }
-
   render() {
     const { lang }  = this.props
     return (

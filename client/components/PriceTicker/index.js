@@ -4,14 +4,12 @@ import { FormattedMessage, FormattedNumber } from 'react-intl'
 import classnames from 'classnames'
 
 class PriceTicker extends Component {
-
   render() {
     const { market, lastPrice, preClosePrice }  = this.props
     const trendClasses = classnames(
       style.trend,
       { [style.increse]: preClosePrice < lastPrice, [style.decline]: preClosePrice > lastPrice }
     )
-
     return (
       <div className={style.priceTicker}>
         <div className={style.market}>{market}</div>

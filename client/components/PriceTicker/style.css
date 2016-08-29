@@ -23,15 +23,12 @@
     line-height: 1rem;
     color: #96e7ff;
     text-align: right;
-
     &:before, &:after {
       margin: 0 2px;
     }
-
     &.increse:before {
       content: '+';
     }
-
     &.increse:after {
       content: '';
       align-self: flex-start;
@@ -41,11 +38,9 @@
       margin-top: 4px;
       margin-right: 0;
     }
-
     &.decline:before {
       content: '-';
     }
-
     &.decline:after {
       content: '';
       align-self: flex-start;
